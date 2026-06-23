@@ -6,6 +6,7 @@ void main(){
 
 float saldo = 1000.00; 
 float divida = 0.00;
+float emprestimo = 0.00;
 float valor;
 int opcao = -1;
 
@@ -37,7 +38,7 @@ while (opcao != 7){
            
             printf("  DEPÓSITO\n");
             printf("  Informe o valor que deseja depositar: R$ ");
-            scanf("%lf", &valor);
+            scanf("%f", &valor);
  
             if (valor > 0) {
                 saldo = saldo + valor;
@@ -55,7 +56,7 @@ while (opcao != 7){
 
             printf("  SAQUE\n");
             printf("  Informe o valor que deseja para sacar: R$ ");
-            scanf("%lf", &valor);
+            scanf("%f", &valor);
  
             if (valor <= 0) {
                 printf("\n  Valor invalido! Digite um valor maior que zero.\n");
@@ -84,7 +85,7 @@ while (opcao != 7){
 
             } else { //Solicitar emprestimo
                 printf("  Informe o valor do emprestimo: R$ ");
-                scanf("%lf", &valor);
+                scanf("%f", &valor);
  
                 if (valor <= 0) {
                     printf("\n  Valor invalido! Digite um valor maior que zero.\n");
@@ -119,7 +120,7 @@ while (opcao != 7){
             } else {
                 printf("  Emprestimo pendente: R$ %.2f\n", emprestimo);
                 printf("  Informe o valor a pagar: R$ ");
-                scanf("%lf", &valor);
+                scanf("%f", &valor);
  
                 if (valor <= 0) {
                     printf("\n  Valor invalido! Digite um valor maior que zero.\n");
@@ -155,6 +156,7 @@ while (opcao != 7){
  
         //saida
         else if (opcao == 7) {
+
             printf("\n==========================================\n");
             printf("  Obrigado por utilizar nossos serviços!\n");
             printf("  Até logo!\n");
